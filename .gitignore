@@ -1,0 +1,15 @@
+# version 1.0.0
+
+### OSX ###############
+#
+.DS_Store
+
+### NPM ###############
+#
+node_modules/*
+npm-debug.log
+
+### React and Babel Builds ###############
+#
+buildReact/*
+build/*
