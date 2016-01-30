@@ -6,6 +6,7 @@ var AppActions = require('../actions/appActions');
 //
 var getKinveyState = function(){
   var obj = { kinvey:KinveyStore.getKinveyInitData() };
+  console.log('AppHome:getKinveyState:',obj);
   return obj;
 };
 // Component
@@ -36,7 +37,7 @@ var AppHome = React.createClass({
     this.setState(getKinveyState());
   },
   _onKinveyClick: function(event){
-    console.log('_onKinveyClick:event:',event);
+    //console.log('_onKinveyClick:event:',event);
     AppActions.kinveyConnect();
   }
 });

@@ -4,17 +4,18 @@ var AppActions = require('../actions/appActions');
 //
 var _init = function(){
   var promise = Kinvey.init({
-    appKey    : 'xxxxxxxxxx',
-    appSecret : 'xxxxxxxxxx'
+    appKey    : 'XX',
+    appSecret : 'XX'
   });
   promise.then(function(activeUser){
     console.log('Kinvey.init:SUCCESS: activeUser:',activeUser);
     var promise = Kinvey.ping();
     promise.then(function(response) {
       console.log('Kinvey.ping:SUCCESS: Kinvey Service is alive, version: ' + response.version + ', response: ' + response.kinvey);
-      AppActions.initKinveySuccess(response);
+      console.log('Kinvey.ping:response:',response);
+      AppActions.kinveyConnectionSuccess(response);
     }, function(error) {
-      console.log('Kinvey.ping:ERROR:' + error);
+      console.log('Kinvey.ping:ERROR:', error);
       //console.log('Kinvey.ping:ERROR: Response: ' + error.description);
     });
   },function(error){
