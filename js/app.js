@@ -2,7 +2,7 @@
 (function(){
   var React = require('react');
   var ReactDOM = require('react-dom');
-  var KinveyAPI = require('./utils/kinveyAPI');
+  //var KinveyAPI = require('./utils/kinveyAPI');
   //
   var Home = require('./components/appHome.react');
   //
@@ -11,6 +11,6 @@
     document.getElementById('react-app')
   );
   //
-  KinveyAPI.init();
+  //KinveyAPI.init();
   //KinveyAPI.initServer();
 })();
