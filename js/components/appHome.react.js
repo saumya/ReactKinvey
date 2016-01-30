@@ -37,6 +37,8 @@ var AppHome = React.createClass({
     this.setState(getKinveyState());
   },
   _onKinveyClick: function(event){
+    event.preventDefault();
+    event.stopPropagation();
     //console.log('_onKinveyClick:event:',event);
     AppActions.kinveyConnect();
   }

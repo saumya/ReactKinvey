@@ -6,8 +6,8 @@ var KinveyAPI = require('../utils/kinveyAPI');
 var AppActions = {
   kinveyConnect: function(data){
     var action  = {
-      actionType  : AppConstants.KINVEY_CONNECT,
-      data        : data
+      actionType:AppConstants.KINVEY_CONNECT,
+      data:data
     };
     //AppDispatcher.handleAction(action);
     KinveyAPI.initServer(data);
@@ -15,8 +15,8 @@ var AppActions = {
   kinveyConnectionSuccess: function(data){
     console.log('AppActions:initKinveySuccess');
     var action = {
-      actionType  : AppConstants.KINVEY_INIT,
-      data        : data
+      actionType:AppConstants.KINVEY_INIT,
+      data:data
     };
     AppDispatcher.handleAction(action);
   }
