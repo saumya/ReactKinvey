@@ -12,5 +12,5 @@
   );
   //
   KinveyAPI.init();
-  KinveyAPI.initServer();
+  //KinveyAPI.initServer();
 })();

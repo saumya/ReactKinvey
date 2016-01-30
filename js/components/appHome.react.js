@@ -27,6 +27,7 @@ var AppHome = React.createClass({
         <h3>Home</h3>
         <div className="one-half column">Welcome {this.props.name} </div>
         <div className="one-half column">{this.props.message}</div>
+        <button>Kinvey</button>
       </div>
     );
   },
