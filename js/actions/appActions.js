@@ -10,7 +10,7 @@ var AppActions = {
       data:data
     };
     //AppDispatcher.handleAction(action);
-    KinveyAPI.initServer(data);
+    KinveyAPI.initServer(data,this);
   },
   kinveyConnectionSuccess: function(data){
     console.log('AppActions:initKinveySuccess');
