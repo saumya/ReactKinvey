@@ -43,11 +43,5 @@ var AppHome = React.createClass({
   _onChange: function(){
     this.setState(getKinveyState());
   },
-  _onKinveyClick: function(event){
-    event.preventDefault();
-    event.stopPropagation();
-    //console.log('_onKinveyClick:event:',event);
-    AppActions.kinveyConnect();
-  }
 });
 module.exports = AppHome;
