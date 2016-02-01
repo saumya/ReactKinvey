@@ -4,6 +4,8 @@ var EventEmitter = require('events').EventEmitter;
 var AppConstants = require('../constants/appConstants');
 var _ = require('underscore');
 //
+var KinveyAPI = require('../utils/kinveyAPI');
+//
 var kinveyData = {};
 var kinveyInitDone = function(data){
   kinveyData = data;
@@ -29,6 +31,9 @@ AppDispatcher.register(function(payload){
   switch (action.actionType) {
     case AppConstants.KINVEY_INIT:
         kinveyInitDone(action.data);
+      break;
+    case AppConstants.KINVEY_CONNECT:
+        KinveyAPI.initServerCallFromStore();
       break;
     default:
       return true;

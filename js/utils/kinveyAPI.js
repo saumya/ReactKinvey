@@ -1,7 +1,8 @@
 // 0.1.0
 var Kinvey = require('kinvey');
+var AppActions = require('../actions/appActions');
 //
-var _init = function(AppActions){
+var _init = function(){
   var promise = Kinvey.init({
     appKey    : 'xxxxxxx',
     appSecret : 'xxxxxxx'
@@ -27,6 +28,9 @@ var api = {
   },
   initServer: function(data,AppActions){
     _init(AppActions);
+  },
+  initServerCallFromStore: function(){
+    _init();
   }
 };
 module.exports = api;
