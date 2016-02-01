@@ -1,6 +1,5 @@
 // 0.1.0
 var Kinvey = require('kinvey');
-//var AppActions = require('../actions/appActions');
 //
 var _init = function(AppActions){
   var promise = Kinvey.init({
@@ -12,9 +11,6 @@ var _init = function(AppActions){
     var promise = Kinvey.ping();
     promise.then(function(response) {
       console.log('Kinvey.ping:SUCCESS: Kinvey Service is alive, version: ' + response.version + ', response: ' + response.kinvey);
-      //console.log('Kinvey.ping:response:',response);
-      //console.log('Kinvey.ping:AppActions:',AppActions);
-      //var AppActions = require('../actions/appActions');
       AppActions.kinveyConnectionSuccess(response);
     }, function(error) {
       console.log('Kinvey.ping:ERROR:', error);

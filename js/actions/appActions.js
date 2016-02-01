@@ -5,11 +5,13 @@ var KinveyAPI = require('../utils/kinveyAPI');
 //
 var AppActions = {
   kinveyConnect: function(data){
+    /*
     var action  = {
       actionType:AppConstants.KINVEY_CONNECT,
       data:data
     };
-    //AppDispatcher.handleAction(action);
+    AppDispatcher.handleAction(action);
+    */
     KinveyAPI.initServer(data,this);
   },
   kinveyConnectionSuccess: function(data){
