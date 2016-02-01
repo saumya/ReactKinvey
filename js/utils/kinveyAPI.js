@@ -1,6 +1,6 @@
 // 0.1.0
 var Kinvey = require('kinvey');
-var AppActions = require('../actions/appActions');
+//var AppActions = require('../actions/appActions');
 //
 var _init = function(){
   var promise = Kinvey.init({
@@ -16,6 +16,7 @@ var _init = function(){
       // TODO: fix this, can not get AppActions !
       console.log('Kinvey.ping:response:',response);
       console.log('Kinvey.ping:AppActions:',AppActions);
+      var AppActions = require('../actions/appActions');
       AppActions.kinveyConnectionSuccess(response);
     }, function(error) {
       console.log('Kinvey.ping:ERROR:', error);
